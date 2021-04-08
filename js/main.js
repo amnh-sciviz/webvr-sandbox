@@ -738,7 +738,6 @@ function flyToUser(highlighter, targetObj) {
         /*setTimeout( function() {
           onUserSelect();
         }, 10000 );*/
-        
       });
 }
 
@@ -895,29 +894,6 @@ function drawUI() {
   itemPlane.quaternion.copy( camera.quaternion );
   itemPlane.visible = false;
   scene.add( itemPlane );
-  // meshobj.add(itemPlane);
-  // uiGroup.add( meshobj );
-
- /*
-  mediaBttn = new THREE.Sprite(UIMaterial);
-  mediaBttn.position.set(3, 3, camera.position.z -5);
-  mediaBttn.width = 40;
-  mediaBttn.height = 24;
-  mediaBttn.quaternion.copy( camera.quaternion );
-  scene.add( mediaBttn );
-  group.add( mediaBttn );
- */
-  var testGeo = new THREE.PlaneBufferGeometry();
-  var testMat = new THREE.MeshBasicMaterial( { map: texture, opacity: 0.8, transparent: true,  depthWrite: false, depthTest: false  } );
-
-  const testMesh = new THREE.Mesh( testGeo, testMat );
-  testMesh.position.set(2, 2, camera.position.z -5);
-  testMesh.quaternion.copy( camera.quaternion );
-  testMesh.width = 80;
-  testMesh.height = 48;
-  scene.add( testMesh );
-  //meshobj.add(testMesh);
-  uiGroup.add( testMesh );
 }
 
 
